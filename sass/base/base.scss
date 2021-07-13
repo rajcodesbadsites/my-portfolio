@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  background-color: #1E1E1E;
+  color: #FBFBFB;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%; // rem unit value definition 1rem=10px because 10px/16px = 0.625 or 62.5%
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+// ::selection {
+//   background-color: $clr-primary;
+//   color: $clr-secondary-white;
+// }

@@ -1,0 +1,27 @@
+.section {
+    &--work {   
+        margin-top: 6rem;
+        display: flex;
+        justify-content: space-around;
+
+
+        &__thumbnail {
+            border: white 1px solid;
+
+            &--image {
+                width: 50rem;
+                outline: white 1px solid;
+            }
+
+            &__textbox {
+                display: flex;
+                justify-content: space-between;
+
+                &--title, &--job {
+                    font-size: 1.6rem;
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}
