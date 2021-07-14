@@ -47,19 +47,21 @@ a {
     .main-nav__list__items:not(:last-child) {
       margin-right: 8rem; }
 
-.section--work {
-  margin-top: 6rem;
-  display: flex;
-  justify-content: space-around; }
-  .section--work__thumbnail {
+.section__work__grid-container {
+  margin: 6rem 13.2rem;
+  display: grid;
+  grid-template-rows: 35.8rem 35.8rem;
+  grid-template-columns: 50.2rem 50.2rem;
+  grid-gap: 8rem; }
+  .section__work__grid-container__thumbnail {
     border: white 1px solid; }
-    .section--work__thumbnail--image {
+    .section__work__grid-container__thumbnail--image {
       width: 50rem;
       outline: white 1px solid; }
-    .section--work__thumbnail__textbox {
+    .section__work__grid-container__thumbnail__textbox {
       display: flex;
       justify-content: space-between; }
-      .section--work__thumbnail__textbox--title, .section--work__thumbnail__textbox--job {
+      .section__work__grid-container__thumbnail__textbox--title, .section__work__grid-container__thumbnail__textbox--job {
         font-size: 1.6rem;
         margin: 1rem; }
 
