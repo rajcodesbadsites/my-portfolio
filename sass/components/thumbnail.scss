@@ -1,19 +1,67 @@
 .section {
     &__work {
         &__grid-container {
-            margin: 6rem 13.2rem;
+            margin: 6rem auto;
             display: grid;
             grid-template-rows: 35.8rem 35.8rem;
             grid-template-columns: 50.2rem 50.2rem;
             grid-gap: 8rem;
+            width: 79.5%;
 
             &__thumbnail {
                 border: white 1px solid;
+                border-radius: 1.6rem;
+                
+                &--figure {
+                    position: relative;
 
-                &--image {
-                    width: 50rem;
-                    outline: white 1px solid;
+                    &__image {
+                        width: 50rem;
+                        outline: white 1px solid;
+                        border-radius: 1.6rem 1.6rem 0 0;
+                        transition: all .4s ease-in-out; 
+                        filter: brightness(100%) blur(0px);
+                        z-index: 100;
+                    }
+
+                    &__figcaption {
+                        position: absolute;
+                        font-size: 1.6rem;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, 400%);
+                        z-index: 400;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all .2s ease-in-out;
+                    }
+
+
+                    &:hover &__image {
+                        filter: brightness(20%) blur(1px);
+                        transform: scale(.99);
+                        cursor: pointer;
+                    }
+                    
+                    &:hover &__figcaption {
+                        transform: translate(-50%, 60%);
+                        visibility: visible;
+                        opacity: 1;                    
+                    }
+
+
+                    
                 }
+
+
+                // &--image:hover {
+                //     opacity: 0.4;
+                //     cursor: pointer;
+                //     filter: blur(4px);
+                //     transform: scale(.99);
+                // }
 
                 &__textbox {
                     display: flex;
@@ -22,6 +70,28 @@
                     &--title, &--job {
                         font-size: 1.6rem;
                         margin: 1rem;
+                        // border-bottom: $clr-primary-red 0px solid;
+                        transition: all .1s ease-in-out;
+
+                    }
+
+                    &--title:after {
+                        content: '';
+                        display: block;
+                        border-bottom: 1.4px solid $clr-primary-red;
+                        width: 0;
+                        position: absolute;
+                        transition: .2s ease-in-out;
+                    }
+
+                    &--title:hover::after {
+                        width: 21.8%; 
+                    }
+
+
+                    &--title:hover {
+                        color: $clr-primary-red;
+                        // border-bottom: $clr-primary-red 1px solid;
                     }
                 }
             }

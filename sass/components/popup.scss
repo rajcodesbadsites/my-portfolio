@@ -1,0 +1,106 @@
+.popup {
+    background-color: rgba(#000, 0.8);
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+ 
+
+    &__content {
+        background-color: $clr-primary;
+        width: 57%;
+        box-shadow: 0 2rem 4rem rgba($clr-primary, 0.2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.25);
+        border-radius: 3px;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s 0.2s;
+        padding: 12rem;
+
+        &__heading {
+            font-size: 3.8rem;
+            color: $clr-secondary-black;
+            margin-bottom: 3rem;
+            width: 23ch;
+        }
+
+        &__input {
+            padding: 2.4rem 3rem;
+            display: block;
+            font-family: inherit;
+            font-weight: 100;
+            width: 90%;
+            font-size: 1.6rem;
+            background-color: $clr-secondary-black;
+            color: rgba($clr-secondary-white, 0.6) ;
+            border-radius: 50rem;
+            outline: none;
+            border: none;
+            margin: 3rem 0;
+            margin-left: 4px;
+        }
+
+        &__button {
+            &__submit-btn {
+                padding: 1.2rem;
+                display: inline-block;
+                width: 22%;
+                font-size: 2.6rem;
+                font-family: inherit;
+                text-transform: uppercase;
+                background-color: transparent;
+                color: $clr-secondary-black;
+                border-radius: 50rem;
+                border: $clr-secondary-black 4px solid;
+                outline: none;
+                transition: all .2s ease-in-out;
+                margin-left: 1rem;
+                position: absolute;
+                right: 17.5rem;
+                
+            }
+    
+            &__submit-btn:hover {
+                box-shadow: violet 2px 2px;
+                background-color: $clr-secondary-black;
+                color: $clr-secondary-white;
+                cursor: pointer;
+            }
+    
+    
+        }
+    }
+
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}  
+
+// .popup:target {
+//     opacity: 1;
+//     visibility: visible;
+// }
+
+// .popup:target .popup__content {
+//     opacity: 1;
+//     transform: translate(-50%, -50%) scale(1);
+// }
