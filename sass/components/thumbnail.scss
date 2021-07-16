@@ -11,6 +11,10 @@
             grid-gap: 8rem;
             width: 79.5%;
 
+            @include respond(phone) {
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));    
+            }
+
             &__thumbnail {
                 border: white 1px solid;
                 border-radius: 0 0 1.6rem 1.6rem;
