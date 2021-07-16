@@ -23,6 +23,10 @@ body {
   font-family: 'Playfair Display', serif;
   font-family: 'Roboto Mono', sans-serif; }
 
+::selection {
+  background-color: #42B0FF;
+  color: #000; }
+
 .yellow {
   color: #FFD166; }
 
@@ -187,6 +191,9 @@ a {
   color: #FBFBFB;
   height: 88vh;
   border-bottom: 1.54px solid #08243b; }
+  @media (max-width: 37.5em) {
+    .hero {
+      height: 128vh; } }
   .hero__light-mode {
     position: absolute;
     top: 3.5rem;
@@ -206,14 +213,22 @@ a {
       font-weight: 400;
       line-height: 6.3rem;
       color: #FFD166; }
+      @media (max-width: 37.5em) {
+        .hero__text-box__title {
+          width: 7ch;
+          font-size: 4.8rem; } }
     .hero__text-box__paragraph, .hero__text-box__main {
       font-size: 1.8rem;
       line-height: 2.6rem; }
+      @media (max-width: 37.5em) {
+        .hero__text-box__paragraph, .hero__text-box__main {
+          font-size: 2.4rem;
+          line-height: 3.2rem; } }
     .hero__text-box__main {
       width: 45ch; }
       @media (max-width: 37.5em) {
         .hero__text-box__main {
-          width: 28ch; } }
+          width: 23ch; } }
       .hero__text-box__main__cta-link {
         text-decoration: none;
         color: #ACFF86;
@@ -226,11 +241,14 @@ a {
 .footer {
   margin-top: 2rem;
   width: 100vw;
-  height: 100%;
+  height: 5.9rem;
   border-top: 1.54px solid #08243b;
   background-color: #030e18;
   display: flex;
   align-items: center; }
+  @media (max-width: 37.5em) {
+    .footer {
+      height: 100%; } }
   .footer__contact {
     display: flex;
     justify-content: space-between;

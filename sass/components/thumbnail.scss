@@ -3,9 +3,6 @@
         &__grid-container {
             margin: 6rem auto;
             display: grid;
-            // grid-template-rows: 35.8rem 35.8rem;
-            // grid-template-columns: 50.2rem 50.2rem;
-            // grid-template-columns: repeat(2, 1fr);
             grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
             grid-template-rows: repeat(2, 1fr);
             grid-gap: 8rem;
@@ -25,7 +22,6 @@
                     &__image {
                         width: 100%;
                         outline: white 1px solid;
-                        // border-radius: 1.6rem 1.6rem 0 0;
                         transition: all .4s ease-in-out; 
                         filter: brightness(100%) blur(0px);
                         z-index: 100;
@@ -63,12 +59,7 @@
                 }
 
 
-                // &--image:hover {
-                //     opacity: 0.4;
-                //     cursor: pointer;
-                //     filter: blur(4px);
-                //     transform: scale(.99);
-                // }
+              
 
                 &__textbox {
                     display: flex;
@@ -77,7 +68,6 @@
                     &--title, &--job {
                         font-size: 1.6rem;
                         margin: 1rem;
-                        // border-bottom: $clr-primary-red 0px solid;
                         transition: all .1s ease-in-out;
 
                     }
@@ -98,7 +88,6 @@
 
                     &--title:hover {
                         color: $clr-primary-red;
-                        // border-bottom: $clr-primary-red 1px solid;
                     }
                 }
             }

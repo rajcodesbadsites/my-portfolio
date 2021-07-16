@@ -3,7 +3,9 @@
     background-color: #051828;
     color: $clr-secondary-white;
     height: 88vh; 
-    
+    @include respond(phone) {
+        height: 128vh;
+    }
     border-bottom: 1.54px solid #08243b;
 
     &__light-mode {
@@ -25,7 +27,8 @@
 
         &__title, &__paragraph {
             margin-bottom: 4rem;
-
+            
+            
         }
 
         &__title {  
@@ -34,18 +37,27 @@
             font-weight: 400;
             line-height: 6.3rem;
             color: $clr-primary;
+            @include respond(phone) {
+                width: 7ch;
+                font-size: 4.8rem;
+            }
         } 
 
         &__paragraph, &__main {
             font-size: 1.8rem;
             line-height: 2.6rem;
+            @include respond(phone) {
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+
+            }
         }
 
         &__main {
             width: 45ch;
 
             @include respond(phone) {
-                width: 28ch;
+                width: 23ch;
             }
 
 
@@ -55,19 +67,11 @@
                 border-bottom: 1.54px solid $clr-secondary-cta;   
 
 
-                // background-image: $clr-cta-gradient;
-                // background-clip: text;
-                // -webkit-background-clip: text;
-                // color: transparent;
-                // border-bottom: 1.54px solid green;
-                // transition: all .1s ease-in-out;
                 &:hover {
                     color: $clr-secondary-black;
                     border-bottom: 1.54px solid $clr-secondary-black;
                     background-image: $clr-cta-gradient-hover-a;
 
-                    // background-image: $clr-cta-gradient-hover;
-                    // border-bottom: 1.54px solid #FF64EF;
                 }
             }
         }

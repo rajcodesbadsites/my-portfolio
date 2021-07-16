@@ -28,7 +28,7 @@ body {
   font-family: 'Roboto Mono', sans-serif;
 }
 
-// ::selection {
-//   background-color: $clr-primary;
-//   color: $clr-secondary-white;
-// }
+::selection {
+  background-color: #42B0FF;
+  color: #000;
+}
