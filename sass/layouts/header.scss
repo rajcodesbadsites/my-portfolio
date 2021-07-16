@@ -2,8 +2,9 @@
     position: relative;
     background-color: #051828;
     color: $clr-secondary-white;
-    height: 90vh; 
-    border-bottom: 1.54px solid $clr-primary;
+    height: 88vh; 
+    
+    border-bottom: 1.54px solid #08243b;
 
     &__light-mode {
         position: absolute;
@@ -42,6 +43,10 @@
 
         &__main {
             width: 45ch;
+
+            @include respond(phone) {
+                width: 28ch;
+            }
 
 
             &__cta-link {

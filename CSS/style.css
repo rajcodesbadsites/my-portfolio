@@ -182,8 +182,8 @@ a {
   position: relative;
   background-color: #051828;
   color: #FBFBFB;
-  height: 90vh;
-  border-bottom: 1.54px solid #FFD166; }
+  height: 88vh;
+  border-bottom: 1.54px solid #08243b; }
   .hero__light-mode {
     position: absolute;
     top: 3.5rem;
@@ -208,6 +208,9 @@ a {
       line-height: 2.6rem; }
     .hero__text-box__main {
       width: 45ch; }
+      @media (max-width: 37.5em) {
+        .hero__text-box__main {
+          width: 28ch; } }
       .hero__text-box__main__cta-link {
         text-decoration: none;
         color: #ACFF86;
