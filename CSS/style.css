@@ -138,11 +138,19 @@ a {
     opacity: 0;
     transition: all 0.5s 0.2s;
     padding: 12rem; }
+    @media (max-width: 37.5em) {
+      .popup__content {
+        padding: 10rem 2rem;
+        border-radius: 1.8rem; } }
     .popup__content__heading {
       font-size: 3.8rem;
       color: #141414;
       margin-bottom: 3rem;
       width: 23ch; }
+      @media (max-width: 37.5em) {
+        .popup__content__heading {
+          font-size: 2.8rem;
+          width: 18ch; } }
     .popup__content__input {
       padding: 2.4rem 3rem;
       display: block;
@@ -157,10 +165,12 @@ a {
       border: none;
       margin: 3rem 0;
       margin-left: 4px; }
-    .popup__content__button__submit-btn {
+      @media (max-width: 37.5em) {
+        .popup__content__input {
+          width: 100%; } }
+    .popup__content__submit-btn {
       padding: 1.2rem;
       display: inline-block;
-      width: 22%;
       font-size: 2.6rem;
       font-family: inherit;
       text-transform: uppercase;
@@ -173,7 +183,10 @@ a {
       margin-left: 1rem;
       position: absolute;
       right: 17.5rem; }
-    .popup__content__button__submit-btn:hover {
+      @media (max-width: 37.5em) {
+        .popup__content__submit-btn {
+          right: 11.5rem; } }
+    .popup__content__submit-btn:hover {
       box-shadow: violet 2px 2px;
       background-color: #141414;
       color: #FBFBFB;
@@ -212,7 +225,8 @@ a {
       font-size: 3.8rem;
       font-weight: 400;
       line-height: 6.3rem;
-      color: #FFD166; }
+      color: #FFD166;
+      width: 15ch; }
       @media (max-width: 37.5em) {
         .hero__text-box__title {
           width: 7ch;

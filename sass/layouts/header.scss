@@ -37,6 +37,7 @@
             font-weight: 400;
             line-height: 6.3rem;
             color: $clr-primary;
+            width: 15ch;
             @include respond(phone) {
                 width: 7ch;
                 font-size: 4.8rem;
