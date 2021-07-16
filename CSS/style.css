@@ -9,7 +9,7 @@
   display: none; }
 
 html, body {
-  background-color: #1E1E1E;
+  background-color: #03111b;
   color: #FBFBFB;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -36,7 +36,7 @@ a {
 .main-nav {
   width: max-content;
   margin: 0 auto;
-  background-color: #141414;
+  background-color: #051828;
   padding: 2rem 6rem;
   border-radius: 0px 0px 3.6rem 3.6rem; }
   .main-nav__list {
@@ -50,8 +50,8 @@ a {
 .section__work__grid-container {
   margin: 6rem auto;
   display: grid;
-  grid-template-rows: 35.8rem 35.8rem;
-  grid-template-columns: 50.2rem 50.2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 8rem;
   width: 79.5%; }
   .section__work__grid-container__thumbnail {
@@ -60,7 +60,7 @@ a {
     .section__work__grid-container__thumbnail--figure {
       position: relative; }
       .section__work__grid-container__thumbnail--figure__image {
-        width: 50rem;
+        width: 40%;
         outline: white 1px solid;
         transition: all .4s ease-in-out;
         filter: brightness(100%) blur(0px);
@@ -180,7 +180,7 @@ a {
 
 .hero {
   position: relative;
-  background-color: #141414;
+  background-color: #051828;
   color: #FBFBFB;
   height: 90vh;
   border-bottom: 1.54px solid #FFD166; }
@@ -220,8 +220,8 @@ a {
 .footer {
   margin-top: 2rem;
   width: 100vw;
-  height: 4.9rem;
-  background-color: black;
+  height: 5.9rem;
+  background-color: #030e18;
   display: flex;
   align-items: center; }
   .footer__contact {
@@ -229,7 +229,9 @@ a {
     justify-content: space-between;
     width: 100%; }
   .footer__email, .footer__copy {
-    font-size: 1.2rem;
-    font-weight: 200;
+    font-size: 1.4rem;
+    font-weight: lighter;
     display: block;
     margin: 0 4rem; }
+  .footer__copy {
+    opacity: 0.2; }
