@@ -3,8 +3,9 @@
     background-color: #051828;
     color: $clr-secondary-white;
     height: 88vh; 
+
     @include respond(phone) {
-        height: 128vh;
+        height: 108vh;
     }
     border-bottom: 1.54px solid #08243b;
 
@@ -12,7 +13,11 @@
         position: absolute;
         top: 3.5rem;
         right: 6.1rem;
-        
+
+        @include respond(phone) {
+            right: 4.1rem;
+            
+        }
         &__text {
             color: rgba($color: #fff, $alpha: .2);
         }
@@ -23,7 +28,11 @@
         position: absolute;
         top: 15%;    
         left: 6%;
-        width: 100%;
+        display: inline-block;
+        @include respond(phone) {
+            top: 2%;
+
+        }
 
         &__title, &__paragraph {
             margin-bottom: 4rem;

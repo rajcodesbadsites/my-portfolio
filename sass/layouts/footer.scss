@@ -34,6 +34,19 @@
     }
 
     &__copy {
-        opacity: 0.2;
-    }
+        opacity: 1;
+        
+        &__paragraph, &__twitter-link {
+            display: inline-block;
+            opacity: 0.2;
+        }
+
+        &__twitter-link {
+            border-bottom: solid 1px white;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    } 
 } 
