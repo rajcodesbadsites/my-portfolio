@@ -1,97 +1,86 @@
 .section {
-    &__work {
-        &__grid-container {
-            margin: 6rem auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-            grid-template-rows: repeat(2, 1fr);
-            grid-gap: 8rem;
-            width: 79.5%;
+  &__work {
+    &__grid-container {
+      margin: 6rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 8rem;
+      width: 79.5%;
 
-            @include respond(phone) {
-                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));    
-            }
+      @include respond(phone) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      }
 
-            &__thumbnail {
-                border: white 1px solid;
-                border-radius: 0 0 1.6rem 1.6rem;
-                
-                &--figure {
-                    position: relative;
+      &__thumbnail {
+        border: white 1px solid;
+        height: 100%;
+        &--figure {
+          position: relative;
 
-                    &__image {
-                        width: 100%;
-                        outline: white 1px solid;
-                        transition: all .4s ease-in-out; 
-                        filter: brightness(100%) blur(0px);
-                        z-index: 100;
-                    }
+          &__image {
+            width: 100%;
+            outline: white 1px solid;
+            transition: all 0.4s ease-in-out;
+            filter: brightness(100%) blur(0px);
+            z-index: 100;
+          }
 
-                    &__figcaption {
-                        position: absolute;
-                        font-size: 1.6rem;
-                        text-transform: uppercase;
-                        font-weight: 500;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, 400%);
-                        z-index: 400;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: all .2s ease-in-out;
-                    }
+          &__figcaption {
+            position: absolute;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 400%);
+            z-index: 400;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-in-out;
+          }
 
+          &:hover &__image {
+            filter: brightness(20%) blur(1px);
+            transform: scale(0.99);
+            cursor: pointer;
+          }
 
-                    &:hover &__image {
-                        filter: brightness(20%) blur(1px);
-                        transform: scale(.99);
-                        cursor: pointer;
-                    }
-                    
-                    &:hover &__figcaption {
-                        transform: translate(-50%, 60%);
-                        visibility: visible;
-                        opacity: 1;                    
-                    }
-
-
-                    
-                }
-
-
-              
-
-                &__textbox {
-                    display: flex;
-                    justify-content: space-between;
-
-                    &--title, &--job {
-                        font-size: 1.6rem;
-                        margin: 1rem;
-                        transition: all .1s ease-in-out;
-
-                    }
-
-                    &--title:after {
-                        content: '';
-                        display: block;
-                        border-bottom: 1.4px solid $clr-primary-red;
-                        width: 0;
-                        position: absolute;
-                        transition: .2s ease-in-out;
-                    }
-
-                    &--title:hover::after {
-                        width: 21.8%; 
-                    }
-
-
-                    &--title:hover {
-                        color: $clr-primary-red;
-                    }
-                }
-            }
+          &:hover &__figcaption {
+            transform: translate(-50%, 60%);
+            visibility: visible;
+            opacity: 1;
+          }
         }
-        
+
+        &__textbox {
+          display: flex;
+          justify-content: space-between;
+
+          &--title,
+          &--job {
+            font-size: 1.6rem;
+            margin: 1rem;
+            transition: all 0.1s ease-in-out;
+          }
+
+          &--title:after {
+            content: "";
+            display: block;
+            border-bottom: 1.4px solid $clr-primary-red;
+            width: 0;
+            transition: 0.2s ease-in-out;
+          }
+
+          &--title:hover::after {
+            width: 100%;
+          }
+
+          &--title:hover {
+            color: $clr-primary-red;
+          }
+        }
+      }
     }
+  }
 }
